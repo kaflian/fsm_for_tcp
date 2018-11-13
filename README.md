@@ -23,12 +23,8 @@
    - def traverse_TCP_states(events):
    
  (5) 이벤트 리스트 만큼 반복하며 next_status 호출 한다.
-   - for event in events:
-        if fms_status.next_status(event) is -1:
-            print("ERROR")
-            return "ERROR"
-     - next_status 호출 시 현재 상태(key)에 입력받은 event가 존재하지 않을경우 -1 반환, 정상적으로 작동하면 0을 반환 한다.
-     - next_status의 반환 값이 -1 일 경우 return "ERROR" 하며 traverse_TCP_states 함수 종료 한다.
+   - next_status 호출 시 현재 상태(key)에 입력받은 event가 존재하지 않을경우 -1 반환, 정상적으로 작동하면 0을 반환 한다.
+   - next_status의 반환 값이 -1 일 경우 return "ERROR" 하며 traverse_TCP_states 함수 종료 한다.
    
  (6) 정상적인 호출(0 반환) 시 current_status 호출 한다.
    - return fms_status.current_status() 
