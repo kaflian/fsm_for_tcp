@@ -7,8 +7,8 @@
  - current_status 메소드를 정의 한 후 현재 상태를 가져올 수 있도록 함
  
 ### 2) 답안 소스 코드 실행 방법
- - fsm_for_tcp 모듈 import 
+ *fsm_for_tcp 모듈 import 
   * import fsm_for_tcp
- - FSM TCP 모델 인스턴스를 생성
+ * FSM TCP 모델 인스턴스를 생성
   * fsm_status = fsm_for_tcp.FmsStatus()
  
