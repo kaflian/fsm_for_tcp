@@ -35,7 +35,7 @@
    
 ### 3) 테스트 코드 실행방법 
  (1) assert를 이용하여 작업 리스트를 받아 처리하는 함수를 호출하여 사용한다.
-   - assert traverse_TCP_states(events) == "CLOSE_WAIT"
+ 
    - assert traverse_TCP_states(["APP_ACTIVE_OPEN", "RCV_SYN_ACK", "RCV_FIN"]) == "CLOSE_WAIT"
    - assert traverse_TCP_states(["APP_PASSIVE_OPEN", "RCV_SYN", "RCV_ACK"]) == "ESTABLISHED"
    - assert traverse_TCP_states(["APP_ACTIVE_OPEN", "RCV_SYN_ACK", "RCV_FIN", "APP_CLOSE"]) == "LAST_ACK"
