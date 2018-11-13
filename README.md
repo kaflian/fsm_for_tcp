@@ -45,4 +45,4 @@
    - assert traverse_TCP_states(event_list5) == "ERROR"
    
 ### 4) 클래스 다이어그램
-
+![Alt text](./fsm_for_tcp_class_diagram.png)
