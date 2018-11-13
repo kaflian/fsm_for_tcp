@@ -9,12 +9,16 @@
 ### 2) 답안 소스 코드 실행 방법
  (1) fsm_for_tcp 모듈 import 
    - import fsm_for_tcp
+   
  (2) FSM TCP model 인스턴스를 생성
    - fsm_status = fsm_for_tcp.FmsStatus()
+   
  (3) 작업 리스트를 선언(events)
    - events = ["APP_ACTIVE_OPEN", "RCV_SYN_ACK", "RCV_FIN"] 등
+   
  (4) 작업 리스트를 받아 처리하는 함수 작성
    - def traverse_TCP_states(events):
+   
  (5) 작업 리스트 만큼 반복하며 next_status 호출
    - for event in events:
         if fms_status.next_status(event) is -1:
@@ -22,6 +26,7 @@
             return "ERROR"
    - next_status 호출 시 정해 진 작업이 없을 경우 -1 반환 함
    - next_status의 반환 값이 -1 일 경우 return "ERROR"
+   
  (6) 정상적인 호출(0 반환) 시 current_status 호출
    - return fms_status.current_status() 
    
